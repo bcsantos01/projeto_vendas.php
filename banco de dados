@@ -1,0 +1,34 @@
+create database Vendasphp
+
+create table [TABELA DE CLIENTES] 
+([Id_Cliente] varchar(40) primary key not null,
+[Nome] varchar(100),
+[CNPJ] varchar(14) not null,
+[Endereco] varchar (100),
+[Bairro] varchar(20),
+[Cidade] varchar(30),
+[Estado] varchar(2),
+[Cep] varchar(8),
+[Telefone] varchar(20)
+)
+
+
+create table [TABELA DE PEDIDOS]
+([Id_Pedido] varchar(40) primary key not null,
+[Id_Cliente] varchar(40),
+[Id_Produto] varchar(40)
+)
+
+create table [TABELA DE VENDEDORES]
+([Id_Vendedor] varchar(10) primary key not null,
+[Nome] varchar(50),
+[Percentual Comissao] float
+)
+
+create table [TABELA DE PRODUTOS]
+([Id_Produto] varchar(10) primary key not null,
+[Nome do Produto] varchar(50),
+[Preco do Produto] smallmoney
+)
+
+select * from [TABELA DE CLIENTES],[TABELA DE PEDIDOS],[TABELA DE PRODUTOS],[TABELA DE VENDEDORES]
